@@ -53,6 +53,6 @@ class Comment < ActiveRecord::Base
   end
 
   def commentable
-    self.find_commentable(commentable_type, commentable_id)
+    self.class.find_commentable(commentable_type, commentable_id)
   end
 end
